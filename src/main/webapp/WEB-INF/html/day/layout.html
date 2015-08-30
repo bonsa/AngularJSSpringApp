@@ -2,26 +2,29 @@
 
 <form name="myForm">
 	<label>Day: <input type="text" name="day"
-		ng-model="dayInYear.day" ng-pattern="dayInYear.pattern" required
+		ng-model="dayOfYear.day" ng-pattern="dayOfYear.pattern" required
 		ng-trim="false">
 	</label>
 	<div role="alert">
-		<span class="error" ng-show="myForm.day.$error.required">
-			Required!</span> <span class="error" ng-show="myForm.day.$error.pattern">
-			Only digits (1-31)!</span>
+		<span class="error" ng-show="myForm.day.$error.required">Required!</span> 
+		<span class="error" ng-show="myForm.day.$error.pattern">Only digits (1-31)!</span>
 	</div>
 
 
 	<label>Month: <input type="text" name="month"
-		ng-model="monthInYear.month" ng-pattern="monthInYear.pattern" required
+		ng-model="monthOfYear.month" ng-pattern="monthOfYear.pattern" required
 		ng-trim="false">
 	</label>
 	<div role="alert">
-		<span class="error" ng-show="myForm.month.$error.required">
-			Required!</span> <span class="error" ng-show="myForm.month.$error.pattern">
-			Only digits (1-12)!</span>
+		<span class="error" ng-show="myForm.month.$error.required">Required!</span> 
+		<span class="error" ng-show="myForm.month.$error.pattern">Only digits (1-12)!</span>
 	</div>
 
-
-	Day: {{dayInYear.day}}, month: {{monthInYear.month}}
+	Day: {{dayOfYear.day}}, month: {{monthOfYear.month}}
+	
+	<div>
+		Get a fact about a day of year: <button ng-click="getDayDescription()">Click</button>
+		<br/>
+		Description {{description}}
+	</div>
 </form>
