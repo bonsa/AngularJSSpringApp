@@ -14,19 +14,18 @@ import angularspringapp.model.DayResponse;
 public class ApiServiceImpl implements ApiService {
 
 	static final Logger log = Logger.getLogger(ApiServiceImpl.class);
-	
+
 	@Override
-	public void getFactAboutDay(String day, String month) {
-		
+	public DayResponse getFactAboutDay(String day, String month) {
+
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("X-Mashape-Key", "6t5XMZpQ4XmshDhvqFPAAwGftiNjp16tibIjsn758sRA5kHRsY");
-        ResponseEntity<DayResponse> response = restTemplate.exchange("https://numbersapi.p.mashape.com/{month}/{day}/date?fragment=true&json=true",
-        	      HttpMethod.GET,
-        	      new HttpEntity<Object>(headers),
-        	      DayResponse.class, month, day);
-        
-        DayResponse dayResponse = response.getBody();
+		ResponseEntity<DayResponse> response = restTemplate.exchange(
+				"https://numbersapi.p.mashape.com/{month}/{day}/date?fragment=true&json=true", HttpMethod.GET,
+				new HttpEntity<Object>(headers), DayResponse.class, month, day);
+
+		return response.getBody();
 	}
 
 }

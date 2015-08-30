@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import angularspringapp.model.DayResponse;
 import angularspringapp.service.ApiService;
 
 @Controller
@@ -17,15 +18,13 @@ public class DayController {
 
 	@Autowired
 	private ApiService apiService;
-	
-	@RequestMapping("/{day}/{month}")
-	public @ResponseBody String getDayDescription(@PathVariable("day") String day, @PathVariable("month") String month) {
-		
-		apiService.getFactAboutDay(day, month);
-		
-		log.info("Day: " + day + " + Month: " + month);
 
-		return "Ellen Fairclough is sworn in as Canada's first woman Cabinet Minister, year 1957";
+	@RequestMapping("/{day}/{month}")
+	public @ResponseBody DayResponse getDayDescription(@PathVariable("day") String day,
+			@PathVariable("month") String month) {
+
+		DayResponse dayResponse = apiService.getFactAboutDay(day, month);
+		return dayResponse;
 	}
 
 	@RequestMapping("/layout")

@@ -10,7 +10,6 @@
 		<span class="error" ng-show="myForm.day.$error.pattern">Only digits (1-31)!</span>
 	</div>
 
-
 	<label>Month: <input type="text" name="month"
 		ng-model="monthOfYear.month" ng-pattern="monthOfYear.pattern" required
 		ng-trim="false">
@@ -23,8 +22,10 @@
 	Day: {{dayOfMonth.day}}, month: {{monthOfYear.month}}
 	
 	<div>
-		Get a fact about a day of year: <button ng-click="getDayDescription()">Click</button>
+		Get a random fact about a day of year: <button ng-click="getDayDescription()">Click</button>
 		<br/>
-		Description {{description}}
+		<span ng-show="description.text.length != 0"> Description: {{description.text}} </span>
+		<br/>
+		<span ng-show="description.year.length != 0"> Year: {{description.year}} </span>
 	</div>
 </form>

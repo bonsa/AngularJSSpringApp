@@ -1,6 +1,8 @@
 package angularspringapp.service;
 
+import angularspringapp.model.DayResponse;
+
 public interface ApiService {
-	
-	void getFactAboutDay(String day, String month);
+
+	DayResponse getFactAboutDay(String day, String month);
 }

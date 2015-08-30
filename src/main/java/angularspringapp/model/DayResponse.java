@@ -1,63 +1,52 @@
 package angularspringapp.model;
 
 public class DayResponse {
-	
+
 	private String text;
 	private Integer year;
 	private Integer number;
 	private Boolean found;
 	private String type;
-	
-	
+
 	public String getText() {
 		return text;
 	}
-
 
 	public void setText(String text) {
 		this.text = text;
 	}
 
-
 	public Integer getYear() {
 		return year;
 	}
-
 
 	public void setYear(Integer year) {
 		this.year = year;
 	}
 
-
 	public Integer getNumber() {
 		return number;
 	}
-
 
 	public void setNumber(Integer number) {
 		this.number = number;
 	}
 
-
 	public Boolean getFound() {
 		return found;
 	}
-
 
 	public void setFound(Boolean found) {
 		this.found = found;
 	}
 
-
 	public String getType() {
 		return type;
 	}
 
-
 	public void setType(String type) {
 		this.type = type;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -70,7 +59,7 @@ public class DayResponse {
 		result = prime * result + ((year == null) ? 0 : year.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -107,12 +96,11 @@ public class DayResponse {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "DayResponse [text=" + text + ", year=" + year + ", number=" + number + ", found=" + found + ", type="
 				+ type + "]";
 	}
-	
 
 }
