@@ -11,7 +11,7 @@ var DayController = function($scope, $http) {
 		pattern : /^([1-9]|1[0-2])$/
 	};
 
-	$scope.getDayDescription = function() {
+	$scope.getFactAboutDay = function() {
 		$http
 		.get('day/' + $scope.dayOfMonth.day + '/' + $scope.monthOfYear.month)
 		.success(function(description) {

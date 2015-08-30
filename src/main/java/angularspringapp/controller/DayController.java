@@ -20,7 +20,7 @@ public class DayController {
 	private ApiService apiService;
 
 	@RequestMapping("/{day}/{month}")
-	public @ResponseBody DayResponse getDayDescription(@PathVariable("day") String day,
+	public @ResponseBody DayResponse getFactAboutDay(@PathVariable("day") String day,
 			@PathVariable("month") String month) {
 
 		DayResponse dayResponse = apiService.getFactAboutDay(day, month);
