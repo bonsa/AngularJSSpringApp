@@ -14,6 +14,7 @@ public class DayController {
 
 	@RequestMapping("/{day}/{month}")
 	public @ResponseBody String getDayDescription(@PathVariable("day") String day, @PathVariable("month") String month) {
+		
 		log.info("Day: " + day + " + Month: " + month);
 
 		return "Ellen Fairclough is sworn in as Canada's first woman Cabinet Minister, year 1957";

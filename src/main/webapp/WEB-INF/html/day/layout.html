@@ -2,7 +2,7 @@
 
 <form name="myForm">
 	<label>Day: <input type="text" name="day"
-		ng-model="dayOfYear.day" ng-pattern="dayOfYear.pattern" required
+		ng-model="dayOfMonth.day" ng-pattern="dayOfMonth.pattern" required
 		ng-trim="false">
 	</label>
 	<div role="alert">
@@ -20,7 +20,7 @@
 		<span class="error" ng-show="myForm.month.$error.pattern">Only digits (1-12)!</span>
 	</div>
 
-	Day: {{dayOfYear.day}}, month: {{monthOfYear.month}}
+	Day: {{dayOfMonth.day}}, month: {{monthOfYear.month}}
 	
 	<div>
 		Get a fact about a day of year: <button ng-click="getDayDescription()">Click</button>
