@@ -1,31 +1,70 @@
-<h1>DAY</h1>
-
-<form name="myForm">
-	<label>Day: <input type="text" name="day"
-		ng-model="dayOfMonth.day" ng-pattern="dayOfMonth.pattern" required
-		ng-trim="false">
-	</label>
-	<div role="alert">
-		<span class="error" ng-show="myForm.day.$error.required">Required!</span> 
-		<span class="error" ng-show="myForm.day.$error.pattern">Only digits (1-31)!</span>
-	</div>
-
-	<label>Month: <input type="text" name="month"
-		ng-model="monthOfYear.month" ng-pattern="monthOfYear.pattern" required
-		ng-trim="false">
-	</label>
-	<div role="alert">
-		<span class="error" ng-show="myForm.month.$error.required">Required!</span> 
-		<span class="error" ng-show="myForm.month.$error.pattern">Only digits (1-12)!</span>
-	</div>
-
-	Day: {{dayOfMonth.day}}, month: {{monthOfYear.month}}
+<!-- <form name="myForm" " class="form-inline" -->
+<!-- 	style="color: white; margin-top: 100px"> -->
+<!-- 	<div class="form-group"> -->
+<!-- 		<label col-sm-2 class="col-sm-2 control-label" style="font-size: 20px">Day:  -->
+<!-- 		<input style="background: transparent; color: white; text-align: right; width: 30px" -->
+<!-- 			; type="text" name="day" ng-model="dayOfMonth.day" -->
+<!-- 			ng-pattern="dayOfMonth.pattern" required ng-trim="false"> -->
+<!-- 		</label> -->
+<!-- 		<div role="alert"> -->
+<!-- 			<span class="error" ng-show="myForm.day.$error.required">Required!</span> -->
+<!-- 			<span class="error" ng-show="myForm.day.$error.pattern">Only -->
+<!-- 				digits (1-31)!</span> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- 	<div class="form-group"> -->
+<!-- 		<label style="font-size: 20px">Month: <input -->
+<!-- 			style="background: transparent; color: white; text-align: right; width: 30px;" -->
+<!-- 			type="text" name="month" ng-model="monthOfYear.month" -->
+<!-- 			ng-pattern="monthOfYear.pattern" required ng-trim="false"> -->
+<!-- 		</label> -->
+<!-- 		<div role="alert"> -->
+<!-- 			<span class="error" ng-show="myForm.month.$error.required">Required!</span> -->
+<!-- 			<span class="error" ng-show="myForm.month.$error.pattern">Only -->
+<!-- 				digits (1-12)!</span> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		Get a random fact about a day of year: -->
+<!-- 		<button class="btn btn-primary" ng-click="getFactAboutDay()">Click</button> -->
+<!-- 		<br /> <span ng-show="description.text.length > 1"> -->
+<!-- 			Description: {{description.text}} </span> <br /> <span -->
+<!-- 			ng-show="description.year != null"> Year: {{description.year}} -->
+<!-- 		</span> -->
+<!-- 	</div> -->
 	
-	<div>
-		Get a random fact about a day of year: <button ng-click="getFactAboutDay()">Click</button>
-		<br/>
-		<span ng-show="description.text.length > 1"> Description: {{description.text}} </span>
-		<br/>
-		<span ng-show="description.year != null"> Year: {{description.year}} </span>
-	</div>
-</form>
+	
+
+<!-- </form> -->
+
+
+<div class="container">
+      <div class="form-horizontal" style=" color: white; margin-top:60px;font-size: 30px; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">
+			Get a random fact about a day of year:
+      </div>
+  <form class="form-horizontal" style="color: white; margin-top: 40px; ">
+    <div class="form-group">
+      <label style=" width: 120px; font-size: 25px; text-align: left;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;" class="control-label col-sm-2" for="day">Day:</label>
+      <div class="col-sm-10">
+        <input style="background: transparent; color: white; width: 25px;" class="form-control" type="text" name="day" ng-model="dayOfMonth.day" ng-pattern="dayOfMonth.pattern" required ng-trim="false">
+      </div>
+    </div>
+    <div class="form-group">
+      <label style="width: 120px; font-size: 25px; text-align: left; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;" class="control-label col-sm-2" for="month">Month:</label>
+      <div class="col-sm-10">          
+        <input style="background: transparent; color: white; width: 25px;" class="form-control" type="text" name="month" ng-model="monthOfYear.month"
+			ng-pattern="monthOfYear.pattern" required ng-trim="false">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10" style="margin-top: 20px;">
+       <button class="btn btn-primary" ng-click="getFactAboutDay()">Click</button>
+      </div>
+    </div>
+    
+    <span ng-show="description.text.length > 1"> 
+			Description: {{description.text}} </span> <br /> <span
+			ng-show="description.year != null"> Year: {{description.year}}
+		</span>
+  </form>
+</div>

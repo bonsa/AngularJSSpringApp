@@ -17,4 +17,6 @@ App.config(['$routeProvider', function ($routeProvider) {
     });
     
     $routeProvider.otherwise({redirectTo: '/day'});
+
 }]);
+

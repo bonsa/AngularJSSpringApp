@@ -18,5 +18,6 @@ var DayController = function($scope, $http) {
 			$scope.description = description;
 		});
 	};
+	
 
 };
