@@ -1,31 +1,33 @@
 package angularspringapp.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import angularspringapp.interceptor.ApiInterceptor;
 import angularspringapp.model.DayResponse;
 
 @Service("ApiService")
-public class ApiServiceImpl implements ApiService {
+public class ApiServiceImpl implements ApiService
+{
 
-	static final Logger log = Logger.getLogger(ApiServiceImpl.class);
+    static final Logger log = Logger.getLogger(ApiServiceImpl.class);
 
-	@Override
-	public DayResponse getFactAboutDay(String day, String month) {
+    @Override
+    public DayResponse getFactAboutDay(String day, String month)
+    {
 
-		RestTemplate restTemplate = new RestTemplate();
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("X-Mashape-Key", "6t5XMZpQ4XmshDhvqFPAAwGftiNjp16tibIjsn758sRA5kHRsY");
-		ResponseEntity<DayResponse> response = restTemplate.exchange(
-				"https://numbersapi.p.mashape.com/{month}/{day}/date?fragment=true&json=true", HttpMethod.GET,
-				new HttpEntity<Object>(headers), DayResponse.class, month, day);
+        RestTemplate restTemplate = new RestTemplate();
+        List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
+        interceptors.add(new ApiInterceptor());
+        restTemplate.setInterceptors(interceptors);
+        DayResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{month}/{day}/date?fragment=true&json=true", DayResponse.class, month, day);
 
-		return response.getBody();
-	}
+        return response;
+    }
 
 }
