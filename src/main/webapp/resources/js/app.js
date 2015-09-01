@@ -15,8 +15,5 @@ angular.module('AngularJSSpringApp', [])
     
     $routeProvider.otherwise({redirectTo: '/day'});
 
-}])
-.run(function($rootScope) {
-	$rootScope.pageClass = 'day';
-});
+}]);
 

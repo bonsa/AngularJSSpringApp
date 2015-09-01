@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('AngularJSSpringApp')
-.controller('MathController ',[ '$scope', '$http', function($scope, $http) {
+.controller('MathController',[ '$scope', '$http', function($scope, $http) {
 
-};
+}]);
