@@ -1,18 +1,15 @@
 'use strict';
 
-var AngularJSSpringApp = {};
-
-var App = angular.module('AngularJSSpringApp', []);
-
-App.config(['$routeProvider', function ($routeProvider) {
+angular.module('AngularJSSpringApp', [])
+.config(['$routeProvider', function ($routeProvider) {
 	
     $routeProvider.when('/day', {
-        templateUrl: 'day/layout',
+        templateUrl: 'day/layout.html',
         controller: DayController
     });
 
     $routeProvider.when('/math', {
-        templateUrl: 'math/layout',
+        templateUrl: 'math/layout.html',
         controller: MathController
     });
     

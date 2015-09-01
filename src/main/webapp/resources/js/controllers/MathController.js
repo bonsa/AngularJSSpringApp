@@ -1,6 +1,7 @@
 'use strict';
 
-var MathController = function($scope, $http) {
+angular.module('AngularJSSpringApp')
+.controller('MathController ',[ '$scope', '$http', function($scope, $http) {
 
     $scope.pageClass = "math";
 };
