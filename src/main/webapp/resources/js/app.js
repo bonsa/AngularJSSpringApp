@@ -1,19 +1,23 @@
 'use strict';
 
-angular.module('AngularJSSpringApp', [])
-.config(['$routeProvider', function ($routeProvider) {
-	
-    $routeProvider.when('/day', {
-        templateUrl: 'day/layout.html',
-        controller: DayController
-    });
+var AngularJSSpringApp = {};
 
-    $routeProvider.when('/math', {
-        templateUrl: 'math/layout.html',
-        controller: MathController
+angular.module('AngularJSSpringApp', ['ui.router'])
+.config(function ($stateProvider, $urlRouterProvider) {
+   
+	
+	$stateProvider
+	.state('day', {
+		url:	'/day', 
+        templateUrl: 'day/layout',
+        controller: 'DayController'
+    })
+	.state('math', {
+		url:	'/math', 
+		templateUrl: 'math/layout',
+        controller: 'MathController'
     });
     
-    $routeProvider.otherwise({redirectTo: '/day'});
-
-}]);
+	$urlRouterProvider.otherwise('day');
+});
 

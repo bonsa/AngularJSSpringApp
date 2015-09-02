@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="resources/css/app.css"/>
 </head>
 <body ng-app="AngularJSSpringApp" ng-controller="MainController" class={{pageClass}}>
-{{pageClass}}
-
 
 	<div id="wrapper">
 		<ul class="menu">
@@ -16,11 +14,13 @@
 			<li><a href="#/math" ng-click="pageClass = 'math'">Math</a></li>
 		</ul>
 		<hr class="" />
-		<div ng-view></div>
+		<div ui-view></div>
 
 	</div>
 
-	<script src="resources/js/lib/angular/angular.js"></script>
+	<script src="resources/js/lib/bower_components/angular/angular.js"></script>
+	<script src="resources/js/lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="resources/js/lib/bower_components/angular-route/angular-route.js"></script>
 	<script src="resources/js/app.js"></script>
 	<script src="resources/js/controllers/MathController.js"></script>
 	<script src="resources/js/controllers/DayController.js"></script>
