@@ -47,3 +47,22 @@
 body {
 	font-size: 25px;
 }
+
+.form-horizontal-div {
+	color: white;
+	margin-top: 60px;
+	font-size: 30px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.form-horizontal-form {
+	color: white;
+	margin-top: 40px;
+}
+
+/* .form-horizontal-label { */
+/* 	width: 120px; */
+/* 	font-size: 25px; */
+/* 	text-align: left; */
+/* 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+/* } */

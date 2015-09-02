@@ -38,11 +38,12 @@
 <!-- </form> -->
 
 
-<div class="container">
-      <div class="form-horizontal" style=" color: white; margin-top:60px;font-size: 30px; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">
+
+<div class="container" >
+      <div class="form-horizontal form-horizontal-div">
 			Get a random fact about a day of year:
       </div>
-  <form class="form-horizontal" style="color: white; margin-top: 40px; ">
+  <form class="form-horizontal form-horizontal-form">
     <div class="form-group">
       <label style=" width: 120px; font-size: 25px; text-align: left;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;" class="control-label col-sm-2" for="day">Day:</label>
       <div class="col-sm-10">
@@ -62,11 +63,12 @@
       </div>
     </div>
     <div ng-show="description.text.length > 1"  style="background-color: rgba(255, 255, 255, 0.4);
-    display: inline;
+    display: block;
     padding: 5px 10px;
     border-style: solid;
     border-width: 1px;
-    margin-top: 20px;"> 
+    margin-top: 20px;
+    line-height: 110%;"> 
 			{{description.year}}, {{description.text}} 
 	</div>
   </form>
