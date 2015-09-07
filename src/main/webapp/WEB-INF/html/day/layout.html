@@ -17,13 +17,18 @@
 					digits (1-31)!</span>
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group div-inline">
 			<label class="control-label col-sm-2 form-horizontal-label"
 				for="month">Month:</label>
-			<div class="col-sm-10">
+			<div class="col-sm-10 inline-div">
 				<input class="form-control form-horizontal-input" type="text"
 					name="month" ng-model="monthOfYear.month"
 					ng-pattern="monthOfYear.pattern" required ng-trim="false">
+			</div>
+			<div role="alert" class="inline-div">
+				<span class="error" ng-show="myForm.month.$error.required">Required!</span>
+				<span class="error" ng-show="myForm.month.$error.pattern">Only
+					digits (1-12)!</span>
 			</div>
 		</div>
 		<div class="form-group">
