@@ -48,7 +48,7 @@ body {
 	font-size: 25px;
 }
 
-.form-horizontal-div {
+.form-horizontal-header {
 	color: white;
 	margin-top: 60px;
 	font-size: 30px;
@@ -60,9 +60,30 @@ body {
 	margin-top: 40px;
 }
 
-/* .form-horizontal-label { */
-/* 	width: 120px; */
-/* 	font-size: 25px; */
-/* 	text-align: left; */
-/* 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
-/* } */
+label[for="day"].form-horizontal-label , label[for="month"].form-horizontal-label {
+	width: 120px;
+	font-size: 25px;
+	text-align: left;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+input[type="text"].form-horizontal-input {
+	background: transparent; 
+	color: white; 
+	width: 25px;
+}
+
+.form-horizontal-div-button {
+	margin-top: 20px;
+}
+
+.form-horizontal-div-display {
+	background-color: rgba(255, 255, 255, 0.4);
+    display: block;
+    padding: 5px 10px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 20px;
+    line-height: 110%;
+    font-size: x-large;
+}
