@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import angularspringapp.interceptor.ApiInterceptor;
 import angularspringapp.model.DayResponse;
+import angularspringapp.model.MathResponse;
 
 @Service("ApiService")
 public class ApiServiceImpl implements ApiService
@@ -26,6 +27,19 @@ public class ApiServiceImpl implements ApiService
         interceptors.add(new ApiInterceptor());
         restTemplate.setInterceptors(interceptors);
         DayResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{month}/{day}/date?fragment=true&json=true", DayResponse.class, month, day);
+
+        return response;
+    }
+    
+    @Override
+    public MathResponse getMathPropertyAboutNumber(String number)
+    {
+
+        RestTemplate restTemplate = new RestTemplate();
+        List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
+        interceptors.add(new ApiInterceptor());
+        restTemplate.setInterceptors(interceptors);
+        MathResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{number}/math", MathResponse.class, number);
 
         return response;
     }
