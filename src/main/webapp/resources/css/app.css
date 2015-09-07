@@ -60,6 +60,10 @@ body {
 	margin-top: 40px;
 }
 
+.inline-div {
+	display: inline;
+}
+
 label[for="day"].form-horizontal-label , label[for="month"].form-horizontal-label {
 	width: 120px;
 	font-size: 25px;
@@ -71,6 +75,7 @@ input[type="text"].form-horizontal-input {
 	background: transparent; 
 	color: white; 
 	width: 25px;
+	display: inline;
 }
 
 .form-horizontal-div-button {
@@ -86,4 +91,11 @@ input[type="text"].form-horizontal-input {
     margin-top: 20px;
     line-height: 110%;
     font-size: x-large;
+}
+
+div[role="alert"] {
+	color : #CD5C5C;
+	font-weight: bold;
+	padding-left: 10px;
+	
 }

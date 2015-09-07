@@ -1,29 +1,38 @@
 
-<div class="container" >
-      <div class="form-horizontal form-horizontal-header">
-			Get a random fact about a day of year:
-      </div>
-  <form class="form-horizontal form-horizontal-form">
-    <div class="form-group">
-      <label class=" control-label col-sm-2 form-horizontal-label" for="day">Day:</label>
-      <div class="col-sm-10">
-        <input class="form-control form-horizontal-input"  type="text" name="day" ng-model="dayOfMonth.day" ng-pattern="dayOfMonth.pattern" required ng-trim="false">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2 form-horizontal-label" for="month">Month:</label>
-      <div class="col-sm-10">          
-        <input class="form-control form-horizontal-input" type="text" name="month" ng-model="monthOfYear.month"
-			ng-pattern="monthOfYear.pattern" required ng-trim="false">
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10 form-horizontal-div-button">
-       <button class="btn btn-primary" ng-click="getFactAboutDay()">Click</button>
-      </div>
-    </div>
-    <div class = "form-horizontal-div-display" ng-show="description.text.length > 1"> 
-			{{description.year}}, {{description.text}} 
-	</div>
-  </form>
+<div class="container">
+	<div class="form-horizontal form-horizontal-header">Get a random
+		fact about a day of year:</div>
+	<form name="myForm" class="form-horizontal form-horizontal-form">
+		<div class="form-group div-inline">
+			<label class=" control-label col-sm-2 form-horizontal-label"
+				for="day">Day:</label>
+			<div class="col-sm-10 inline-div">
+				<input class="form-control form-horizontal-input" type="text"
+					name="day" ng-model="dayOfMonth.day"
+					ng-pattern="dayOfMonth.pattern" required ng-trim="false">
+			</div>
+			<div role="alert" class="inline-div">
+				<span class="error" ng-show="myForm.day.$error.required">Required!</span>
+				<span class="error" ng-show="myForm.day.$error.pattern">Only
+					digits (1-31)!</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2 form-horizontal-label"
+				for="month">Month:</label>
+			<div class="col-sm-10">
+				<input class="form-control form-horizontal-input" type="text"
+					name="month" ng-model="monthOfYear.month"
+					ng-pattern="monthOfYear.pattern" required ng-trim="false">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10 form-horizontal-div-button">
+				<button class="btn btn-primary" ng-click="getFactAboutDay()">Click</button>
+			</div>
+		</div>
+		<div class="form-horizontal-div-display"
+			ng-show="description.text.length > 1">{{description.year}},
+			{{description.text}}</div>
+	</form>
 </div>
