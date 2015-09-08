@@ -18,7 +18,6 @@ public class ApiServiceImpl implements ApiService
 
     static final Logger log = Logger.getLogger(ApiServiceImpl.class);
 
-    @Override
     public DayResponse getFactAboutDay(String day, String month)
     {
 
@@ -31,7 +30,6 @@ public class ApiServiceImpl implements ApiService
         return response;
     }
     
-    @Override
     public MathResponse getMathPropertyAboutNumber(String number)
     {
 

@@ -5,7 +5,7 @@ angular.module('AngularJSSpringApp')
 
 	$scope.number = {
 			value : '1000',
-			pattern : /^\[0-9]{4}$/
+			pattern : /^[0-9]+$/
 		};
 	
 	$scope.getFactAboutNumber = function() {

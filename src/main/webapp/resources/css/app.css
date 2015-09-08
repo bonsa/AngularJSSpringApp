@@ -1,11 +1,17 @@
 /* app css stylesheet */
 
 .day {
-    background-image: url("../img/lake.jpg");
+	background-color: #C2E8FD;
+	background-image: url("../img/lake.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
 }
 
 .math {
-	 background-image: url("../img/field.jpg");
+	background-color: #0D0C0A;
+	background-image: url("../img/field.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
 }
 
 #wrapper {
@@ -74,8 +80,10 @@ label[for="day"].form-horizontal-label , label[for="month"].form-horizontal-labe
 input[type="text"].form-horizontal-input {
 	background: transparent; 
 	color: white; 
-	width: 25px;
+	width: 40px;
 	display: inline;
+	text-align: right;
+//	float: left;
 }
 
 .form-horizontal-div-button {
@@ -84,18 +92,21 @@ input[type="text"].form-horizontal-input {
 
 .form-horizontal-div-display {
 	background-color: rgba(255, 255, 255, 0.4);
-    display: block;
-    padding: 5px 10px;
-    border-style: solid;
-    border-width: 1px;
-    margin-top: 20px;
-    line-height: 110%;
-    font-size: x-large;
+	display: block;
+	padding: 5px 10px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 20px;
+	line-height: 110%;
+	font-size: x-large;
 }
 
 div[role="alert"] {
-	color : #CD5C5C;
+	color: #CD5C5C;
 	font-weight: bold;
 	padding-left: 10px;
-	
+	font-size: 20px;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	padding-top: 5px;
+//	float:left;
 }
