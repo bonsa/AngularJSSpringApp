@@ -70,6 +70,10 @@ body {
 	display: inline;
 }
 
+.div-width {
+	width: 40%;
+}
+
 label[for="day"].form-horizontal-label , label[for="month"].form-horizontal-label, label[for="number"].form-horizontal-label  {
 	width: 120px;
 	font-size: 25px;
@@ -83,7 +87,6 @@ input[type="text"].form-horizontal-input {
 	width: 40px;
 	display: inline;
 	text-align: right;
-//	float: left;
 }
 
 .form-horizontal-div-button {
@@ -99,6 +102,7 @@ input[type="text"].form-horizontal-input {
 	margin-top: 20px;
 	line-height: 110%;
 	font-size: x-large;
+	padding-top: 10px;
 }
 
 div[role="alert"] {
@@ -108,5 +112,5 @@ div[role="alert"] {
 	font-size: 20px;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 	padding-top: 5px;
-//	float:left;
+	float:right;
 }
