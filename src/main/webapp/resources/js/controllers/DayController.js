@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('AngularJSSpringApp')
-.controller('DayController',[ '$scope', '$http', function($scope, $http) {
+.controller('DayController',['$rootScope', '$scope', '$http', function($rootScope, $scope, $http) {
+	
+	$rootScope.pageClass = 'day';
+	
 	$scope.dayOfMonth = {
 		day : '1',
 		pattern : /^([1-9]|1[0-9]|2[0-9]|3[0-1])$/

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('AngularJSSpringApp')
-.controller('MainController',[ '$scope', function($scope) {
+.controller('MainController',[ '$rootScope', function($rootScope) {
 
-	$scope.pageClass = 'day';
+	$rootScope.pageClass = 'day';
 	
 }]);

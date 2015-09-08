@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('AngularJSSpringApp')
-.controller('MathController',[ '$scope', '$http', function($scope, $http) {
+.controller('MathController',[ '$rootScope', '$scope', '$http', function($rootScope, $scope, $http) {
 
+	$rootScope.pageClass = 'math';
+	
 	$scope.number = {
 			value : '9',
 			pattern : /^[0-9]+$/
