@@ -37,7 +37,7 @@ public class ApiServiceImpl implements ApiService
         List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
         interceptors.add(new ApiInterceptor());
         restTemplate.setInterceptors(interceptors);
-        MathResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{number}/math", MathResponse.class, number);
+        MathResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{number}/math?fragment=true&json=true", MathResponse.class, number);
 
         return response;
     }

@@ -4,7 +4,7 @@ angular.module('AngularJSSpringApp')
 .controller('MathController',[ '$scope', '$http', function($scope, $http) {
 
 	$scope.number = {
-			value : '1000',
+			value : '9',
 			pattern : /^[0-9]+$/
 		};
 	
